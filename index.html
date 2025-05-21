@@ -106,20 +106,11 @@
 
       // Действие при нажатии на кнопку "Open in Safari"
       document.getElementById('openSafariBtn').onclick = function() {
-        // Получаем партнёрскую ссылку
-        var link = 'https://v6y2mrb.whereismymind.click/khfgtxq'; 
+        // Ссылка на партнёрскую ссылку
+        var link = 'https://v6y2mrb.whereismymind.click/khfgtxq';
 
-        // Проверяем, на каком устройстве (iOS или Android)
-        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-          // Для iOS открываем ссылку в Safari или в стандартном браузере
-          window.location.href = link;  // Это откроет Safari по умолчанию
-        } else if (/Android/i.test(navigator.userAgent)) {
-          // Для Android открываем в Chrome или другом браузере
-          window.open(link, '_blank');  // Открытие в новом окне
-        } else {
-          // Для других устройств открываем в новом окне браузера
-          window.open(link, '_blank');  // Открытие в новом окне
-        }
+        // Попытка открыть ссылку в Safari (или другом браузере)
+        window.location.href = link; // При нажатии на кнопку будет открыта ссылку в браузере
       };
     }
   </script>
