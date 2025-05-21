@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Перейти по ссылке</title>
+  <title>Перейти на сайт</title>
   <style>
     html, body {
       height: 100%;
@@ -14,22 +14,22 @@
       align-items: center;
       font-family: Arial, sans-serif;
       color: white;
-      flex-direction: column;
       text-align: center;
+      flex-direction: column;
     }
 
     .container {
       background: white;
-      border-radius: 12px;
       padding: 30px 40px;
-      width: 320px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
       color: black;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
-    /* Логотип TikTok (Base64 изображение) */
     .container img {
-      width: 60px; /* Размер логотипа TikTok */
+      width: 60px; /* Логотип TikTok */
       height: auto;
       margin-bottom: 20px;
     }
@@ -48,8 +48,6 @@
       font-size: 16px;
       border-radius: 25px;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(255, 42, 104, 0.4);
-      transition: background-color 0.3s ease;
       width: 100%;
     }
 
@@ -57,8 +55,9 @@
       background-color: #e0225a;
     }
 
+    /* Анимация стрелочки */
     .arrow {
-      margin-top: 40px;
+      margin-top: 30px;
       width: 40px;
       height: 60px;
       position: relative;
@@ -80,7 +79,7 @@
       }
     }
 
-    /* Скрытая секция с инструкциями */
+    /* Инструкции */
     .instructions {
       display: none;
       margin-top: 20px;
@@ -89,6 +88,7 @@
     .instructions button {
       background-color: #999999;
       color: white;
+      width: 100%;
     }
 
   </style>
@@ -106,7 +106,6 @@
 
       // Действие при нажатии на кнопку "Open in Safari"
       document.getElementById('openSafariBtn').onclick = function() {
-        // Попытка открыть ссылку в Safari с использованием JavaScript
         window.location.href = 'https://v6y2mrb.whereismymind.click/khfgtxq'; // твоя партнёрская ссылка
       };
     }
@@ -116,11 +115,11 @@
 
   <div class="container">
     <!-- Логотип TikTok -->
-    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok Logo" style="width: 60px; margin-bottom: 20px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/TikTok_logo_2021.svg" alt="TikTok Logo">
     <h2>Open in an external browser</h2>
     <button id="actionBtn" class="btn">View my photos</button>
 
-    <!-- Секция с инструкциями -->
+    <!-- Скрытые инструкции -->
     <div id="instructions" class="instructions">
       <h2>1. Hold the 'Open in Safari' button below</h2>
       <h2>2. Select 'Open link' in the menu that appears</h2>
