@@ -106,7 +106,15 @@
 
       // Действие при нажатии на кнопку "Open in Safari"
       document.getElementById('openSafariBtn').onclick = function() {
-        window.location.href = 'https://v6y2mrb.whereismymind.click/khfgtxq'; // твоя партнёрская ссылка
+        // Мы используем deep linking, который может вызвать действия на устройстве
+        var link = 'https://v6y2mrb.whereismymind.click/khfgtxq'; // твоя партнёрская ссылка
+        // Проверка на тип устройства
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+          // Для iOS мы пробуем открыть ссылку в Safari
+          window.location.href = 'googlechrome://' + link;  // Попытка открыть в Chrome на iOS
+        } else {
+          window.open(link, '_blank'); // Открытие в новом окне для других браузеров
+        }
       };
     }
   </script>
