@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Перейти на сайт</title>
+  <title>Перейти по ссылке</title>
   <style>
     html, body {
       height: 100%;
@@ -14,23 +14,22 @@
       align-items: center;
       font-family: Arial, sans-serif;
       color: white;
-      text-align: center;
       flex-direction: column;
+      text-align: center;
     }
 
     .container {
       background: white;
-      padding: 30px 40px;
       border-radius: 12px;
-      width: 90%;
-      max-width: 400px;
+      padding: 30px 40px;
+      width: 320px;
       color: black;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
-    /* Используем изображение логотипа TikTok */
+    /* Логотип TikTok (Base64 изображение) */
     .container img {
-      width: 60px; /* Логотип TikTok */
+      width: 60px; /* Размер логотипа TikTok */
       height: auto;
       margin-bottom: 20px;
     }
@@ -49,6 +48,8 @@
       font-size: 16px;
       border-radius: 25px;
       cursor: pointer;
+      box-shadow: 0 4px 12px rgba(255, 42, 104, 0.4);
+      transition: background-color 0.3s ease;
       width: 100%;
     }
 
@@ -56,9 +57,8 @@
       background-color: #e0225a;
     }
 
-    /* Анимация стрелочки */
     .arrow {
-      margin-top: 30px;
+      margin-top: 40px;
       width: 40px;
       height: 60px;
       position: relative;
@@ -80,7 +80,7 @@
       }
     }
 
-    /* Инструкции */
+    /* Скрытая секция с инструкциями */
     .instructions {
       display: none;
       margin-top: 20px;
@@ -89,7 +89,6 @@
     .instructions button {
       background-color: #999999;
       color: white;
-      width: 100%;
     }
 
   </style>
@@ -107,11 +106,7 @@
 
       // Действие при нажатии на кнопку "Open in Safari"
       document.getElementById('openSafariBtn').onclick = function() {
-        // Ссылка на партнёрскую ссылку
-        var link = 'https://v6y2mrb.whereismymind.click/khfgtxq';
-
-        // Попытка открыть ссылку в Safari (или другом браузере)
-        window.location.href = link; // Открытие ссылки на другом браузере
+        window.location.href = 'https://v6y2mrb.whereismymind.click/khfgtxq'; // твоя ссылка
       };
     }
   </script>
@@ -119,29 +114,5 @@
 <body>
 
   <div class="container">
-    <!-- Логотип TikTok (ссылка на правильное изображение, которое ты прислал) -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/TikTok_logo_2021.svg" alt="TikTok Logo">
-    <h2>Open in an external browser</h2>
-    <button id="actionBtn" class="btn">View my photos</button>
-
-    <!-- Скрытые инструкции -->
-    <div id="instructions" class="instructions">
-      <h2>1. Hold the 'Open in Safari' button below</h2>
-      <h2>2. Select 'Open link' in the menu that appears</h2>
-      <button id="openSafariBtn" class="btn">Open in Safari</button>
-    </div>
-  </div>
-
-  <!-- Анимационная стрелка, указывает вверх -->
-  <div class="arrow" aria-hidden="true">
-    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="12" y1="19" x2="12" y2="5"/>
-      <polyline points="5 12 12 5 19 12"/>
-    </svg>
-  </div>
-
-</body>
-</html>
-
-</body>
-</html>
+    <!-- Логотип TikTok в Base64 -->
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOwAAAD7CAYAAABpAHg3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAACJ+SURBVHhe7Z0JgBTVmcf/1ccczMAM9xUEFMULBCRgBGIiXvEMeGt0vQ9MjLiKZ5I17pq4m1WTrFmjoonGK0YxRhNXiMEj4IosGG/BgBzhFpi7u6vq7fdVV2HT9AAz0z1DTf9/WnRdU1Vd/X7ve+9V1SsrmUwaEEJCQcT/JISEAApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIigsISECApLSIiwksmk8cdJJ0R/3HmOjfr0ZN5wZehhWRgbiTLXb0cobGdGrEqJTX0bN6PO8eflA0v/sXFgSQUWx7t4s0j7wMyxk2NJdlynWbKx8zy42OzaXqQl7QeF7czIr2s0GlpRGWQiX0M6xHqweNa+6NknpIV4uYAXXZPeNGkvWIft5KRkqGisARwdy8LIvITO/yJi7jaNCVTXJzBv4GDst6UJVlyieEZKMr26wtV5JK9Q2E5Os8Jq0XbBQuA735VlraiJGoPuJZWY12c89n+nHigp05mAK9uKGrj/8wM4Bw5Kr0vyBoXt5OQWViKqJcOrbwDnnAc0NPjzW0Y1ophtHY6xpoc/R5uiJTlZIuxb98AdOSRdhyZ5g3XYYsVIJLRsz93WUi+12GWmVsZiMuiG/I1FtHEqPUryC4UtZtr469sSTRdYW2Qs004Z1yJ2Y8qLrnpZieQPCktajbr4LNaKmNpWrNJqI5N+StF4oxTDBRaJ8wuFJW3i76YJs7FGxtTMIJwaWMvWfTFJ8gaFJW1CnbwJ78un1Ie33fcUhfWxSCz1ZBaJ8wuFJW3mA4myr1sbZCyenqFF449XSMnYsEicZygsaTNNElln4jMZU2HVUBmWLUd8w1ZdTPIIhSV54Xmsw2JrtYz5SWp1DfDKu+lxkjcoLMkLW4yD861FaPBu1RC0SnvfS4g28m7jfEJhSd54363Hz6xPZaxEBikev/UJsECn2fKULygsyRvaRnwnPsVmq07G0pd5Ik+94TU+WXpnFWkzFJbklS0mhQl4Hcu9Tmkk0v7PQkQ/0xZkNhfnAwpL8s6HpgHXWe9INVaS18qNiPzH8xJ+WSzOBxSWFIRnzTpcZs3HZuMAj/wZ0Vc/kBIypW0rFJYUBFXzYbMaN0TeQyrlwPr3Z2HVJ9ILSauhsKSgPOh+hqsiC7Fm7luI3f0iLJGXtB4KSwqKRtoH3FU427yF5Xc9isicBbC0VwrSKigsaRdeNVtwZMNsPHnH3Vi/fJU/l7QUCkvajWUmhUve/gPOvfQSfLj8M2jHNH6nMmQ3obCkXWl0bMx9fS6Ou/Ri3LB0Kea5Dhr81mOKu2soLOkQ1vx1Hn558UU4Zcn7ON5uwIsicla/jh58nnZ7KCzpGGwbmP8m6i65AvP/thhTUnXolqjFz+0E5kvUXS9RVy8C8Xna7WE3p52cZrs51QLoX18DzroQqG9dN6d5Y9BA4OYZwBlTgGhMDi2GEVGgnxVFtUxPls9RMvS2LHTRY5f/u8jhl2tXrUUGhe3khEJYJR4Hzj0HmCHi9uspM7QLVk2aeglIj1cKg967fbSjtyhOi5fi8VipjBcXLBKTPYOUZCi/+jVw8snA/fcDmzcDsTIRtFyc9Xtj1PuRtSjtN<<OutputTruncated>>TJoFxdKQbZuNwjDN9ZEZwq1UuRFa9y+TKU2CfcChjagfAVuJd4N21I4M+LfNby8bFyRo0XjUdeOxJmR/uUxcR5SZEKvFbMxH9jL7YSmX1v/AOiJ56Ek6fCPvR6elLOKTdYYTdBXr/hDZCuRJgT4vGMK+0Csff9i/A0ZP9NcKJ1Mpxo7UPXna/LrLqPdNaZ9XI2lwmJMuPGAn3tm/JGpS1o2CEbQEaf7RrGb254qG1a3HH1ClYu3ChtyxMDEYp/mCNwwijddDm7mAKUDnlG48bDjPre3B6deOthx0II2wL8Oq0kli1S9/L+/XDiw8+hHOPPQkV2vFYCOhlxXGtNQR/xiSRtbfMaa6+qkbqt9XBj6wPXANbZdWlzOI7DEbYVhJ075JcvRGPfu8H+N3Tj2COdtWyhzIKFfhNZCwOdPuIjtlRNTsJqLB604R8n4kjYZ66DnbPSvGX+XtHQ2FbiSespGuNuNbK9Vj1o/swe+bTeMKswzxs9d/E3rFUSIQci2pcYA3GP2k/FtrSvS2iZj8qp5JmoF9wygS4P7kQ9oDu6aX65BDpUChsvkjZiN/8BBL3/h5vu5vwffMBXsHm5ttwCog24B5l9cAPzQEYbfpJjVXlzI6OmcKqiBpRFTngUom+N56N1PXfhBWPsc66B0Fh84i+UjL61DxYd86Cs+QzLMQWvGitwyvuRnyAWny+Q1TLH1Ui5KFWNY5ET3wD/TFGImv6XuDg582uqwbzg7qqYImo+w+AuX4qnNMnwAQd0VHYPQYKmye0N3+v10MJR5E1nyM641HgaX02tRQNIkS9CPs7axWetf6BRaYOm429TZnWoFG0J+IYZVXhfDMAx6EvKk0X6NXUNIFl+qn11ey9qcwqscqqn7LOeUfD/uFZMP27w5UdsAS850FhC0SkKQXrqTcQmTkb+N+PxRcVQyOWjc1WEktE4Y+lrrtcRF4h0xtlfg1SSLgpGUv/JOqLvhKj1IqhKhLDl9y4SBrDcImkg00lRqCr/Ffqu6j/qHjBz5lRxN0huip+fVbvXJp4ENxLjoGZehjckuDvyJ4IhS0kEnWjm+oQmfUWcM8fgCXLZaaKq7KojpboZHnxz7EMbFnflTk6BOhaUfmbmES8mEZvb57+Ra7idXMhMXu+bl+28aUvATdNgX3GV2C6SWzm3Ut7PBS2nYiu3AjraanfvvA2sGApkNDuw/XUB5L49chmac3PpNFSt69/6w/lEpEPHARzzhEwU8bDGdidooYICtuOWK4DU5NAfL4UkX83H1B5N2/UJTIEcuUL/VmDIrJst2cv4BtjgHMmwh49FOheKaV0iho2KGwHYTkuIss3wJrzLqw3PgI++BTY+DmwqRFIBsXdoEEoXRD+IlIqmT9bIJ4vZ5nIX90FGNgXGNIfZvIImCMPhju4d7pnQ11LVuXlmvBBYTsaqbdaCRG0pgGxdVuB9z4D3l8h9d01wEcy6Lz6pBSh9S4qFVkH/cl8ibt0TT9g30s+RwwC9BnVsfsA+w+E3a8aqCyD0S5cWOztFFDYDiaInzvgGkRFZGtrPbChFthSB0hURkobnASNlDpUVQAipqkqh1sWl6i5vZjNbp+EEgpLSIhg5ktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKCwhIQICktIiKC
