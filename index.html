@@ -48,29 +48,29 @@
 
     </style>
     <script>
-        // Определение языка пользователя
-        var userLang = navigator.language || navigator.userLanguage;
-        var buttonText = userLang.includes('ru') ? 'Зажми кнопку' : 'Press the button';
-
         window.onload = function() {
-            // Устанавливаем текст кнопки в зависимости от языка
+            // Определение языка пользователя
+            var userLang = navigator.language || navigator.userLanguage;
+            var buttonText = userLang.includes('ru') ? 'Зажми кнопку' : 'Press the button';
             document.getElementById('buttonText').innerText = buttonText;
-            
+
             // Определение операционной системы
             var userOS = navigator.platform.toLowerCase();
-            
-            // Скрываем одну кнопку, в зависимости от операционной системы
+
+            // Скрываем одну кнопку в зависимости от устройства (мобильный или десктоп)
             if (userOS.includes('win') || userOS.includes('mac') || userOS.includes('linux')) {
-                document.getElementById('openInBrowser').style.display = 'block'; // Показываем для десктопа
-                document.getElementById('mobileButton').style.display = 'none'; // Скрываем для мобильных
+                // Если десктоп, показываем кнопку для открытия в браузере
+                document.getElementById('openInBrowser').style.display = 'block';
+                document.getElementById('mobileButton').style.display = 'none';
             } else {
-                document.getElementById('openInBrowser').style.display = 'none'; // Скрываем для мобильных
-                document.getElementById('mobileButton').style.display = 'block'; // Показываем для мобильных
+                // Если мобильное устройство, показываем только кнопку для перехода в браузер
+                document.getElementById('openInBrowser').style.display = 'none';
+                document.getElementById('mobileButton').style.display = 'block';
             }
         }
 
         function openLink() {
-            // Заменить на свою партнерскую ссылку
+            // Убедись, что тут правильная партнерская ссылка
             window.location.href = 'https://v6y2mrb.whereismymind.click/khfgtxq';
         }
     </script>
@@ -78,9 +78,8 @@
 <body>
     <div>
         <h2 id="buttonText">Зажми кнопку</h2>
-        <p id="deviceMessage" style="font-size: 1.2em; margin-top: 10px;"></p>
         <!-- Кнопка для мобильных устройств -->
-        <button id="mobileButton" onclick="openLink()">Перейти в браузер</button>
+        <button id="mobileButton" onclick="openLink()" style="display:none;">Перейти в браузер</button>
         <br><br>
         <!-- Кнопка для десктопных устройств -->
         <button id="openInBrowser" style="display:none;" onclick="window.location.href = 'https://v6y2mrb.whereismymind.click/khfgtxq';">Open in Browser</button>
