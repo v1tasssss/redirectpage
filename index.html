@@ -1,77 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Перейти по ссылке</title>
-<style>
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    flex-direction: column;
-  }
-  h2 {
-    margin-bottom: 20px;
-    font-size: 1.5em;
-  }
-  button {
-    padding: 15px 30px;
-    font-size: 1.2em;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px 0;
-  }
-  button:hover {
-    background-color: #45a049;
-  }
-  @media (max-width: 600px) {
-    h2 {
-      font-size: 1.2em;
-    }
-    button {
-      padding: 12px 24px;
-      font-size: 1em;
-    }
-  }
-</style>
-<script>
-  window.onload = function() {
-    var userLang = navigator.language || navigator.userLanguage;
-    var buttonText = userLang.includes('ru') ? 'Зажми кнопку' : 'Press the button';
-    document.getElementById('buttonText').innerText = buttonText;
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Перейти по ссылке</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            justify-content: center;   /* Центр по горизонтали */
+            align-items: center;       /* Центр по вертикали */
+            background-color: #1abc9c; /* Фон цвета Тиффани */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            flex-direction: column;
+            color: white;              /* Текст белого цвета */
+        }
 
-    var userOS = navigator.platform.toLowerCase();
+        h2 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
 
-    if (userOS.includes('win') || userOS.includes('mac') || userOS.includes('linux')) {
-      document.getElementById('openInBrowser').style.display = 'block';
-      document.getElementById('mobileButton').style.display = 'none';
-    } else {
-      document.getElementById('openInBrowser').style.display = 'none';
-      document.getElementById('mobileButton').style.display = 'block';
-    }
-  };
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: black;  /* Черный фон кнопки */
+            color: white;             /* Белые буквы на кнопке */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+            transition: background-color 0.3s ease;
+        }
 
-  function openLink() {
-    window.location.href = 'https://v6y2mrb.whereismymind.click/khfgtxq';
-  }
-</script>
+        button:hover {
+            background-color: #333333;  /* Темно-серый фон при наведении */
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 1.2em;
+            }
+
+            button {
+                padding: 12px 24px;
+                font-size: 1em;
+            }
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var userLang = navigator.language || navigator.userLanguage;
+            var buttonText = userLang.includes('ru') ? 'Зажми кнопку' : 'Press the button';
+            document.getElementById('buttonText').innerText = buttonText;
+
+            var userOS = navigator.platform.toLowerCase();
+
+            if (userOS.includes('win') || userOS.includes('mac') || userOS.includes('linux')) {
+                document.getElementById('openInBrowser').style.display = 'block';
+                document.getElementById('mobileButton').style.display = 'none';
+            } else {
+                document.getElementById('openInBrowser').style.display = 'none';
+                document.getElementById('mobileButton').style.display = 'block';
+            }
+        };
+
+        function openLink() {
+            window.location.href = 'https://v6y2mrb.whereismymind.click/khfgtxq';
+        }
+    </script>
 </head>
 <body>
-  <div>
-    <h2 id="buttonText">Зажми кнопку</h2>
-    <button id="mobileButton" onclick="openLink()" style="display:none;">Перейти в браузер</button>
-    <button id="openInBrowser" style="display:none;" onclick="window.location.href = 'https://v6y2mrb.whereismymind.click/khfgtxq';">Open in Browser</button>
-  </div>
+    <div>
+        <h2 id="buttonText">Зажми кнопку</h2>
+        <!-- Кнопка для мобильных устройств -->
+        <button id="mobileButton" onclick="openLink()" style="display:none;">Перейти в браузер</button>
+        <br><br>
+        <!-- Кнопка для десктопных устройств -->
+        <button id="openInBrowser" style="display:none;" onclick="window.location.href = 'https://v6y2mrb.whereismymind.click/khfgtxq';">Open in Browser</button>
+    </div>
 </body>
 </html>
