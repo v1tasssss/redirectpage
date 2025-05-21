@@ -53,26 +53,19 @@
         var buttonText = userLang.includes('ru') ? 'Зажми кнопку' : 'Press the button';
 
         window.onload = function() {
+            // Устанавливаем текст кнопки в зависимости от языка
             document.getElementById('buttonText').innerText = buttonText;
             
             // Определение операционной системы
             var userOS = navigator.platform.toLowerCase();
             
-            // Показываем кнопку "Open in Browser" только для настольных ОС
+            // Скрываем одну кнопку, в зависимости от операционной системы
             if (userOS.includes('win') || userOS.includes('mac') || userOS.includes('linux')) {
-                document.getElementById('openInBrowser').style.display = 'block';
+                document.getElementById('openInBrowser').style.display = 'block'; // Показываем для десктопа
+                document.getElementById('mobileButton').style.display = 'none'; // Скрываем для мобильных
             } else {
-                document.getElementById('openInBrowser').style.display = 'none';
-            }
-
-            // Проверка на iOS (iPhone)
-            if (userOS.includes('iphone') || userOS.includes('ipod') || userOS.includes('ipad')) {
-                document.getElementById('deviceMessage').innerText = 'Для перехода откройте ссылку в Safari';
-            }
-
-            // Проверка на Android
-            if (userOS.includes('android')) {
-                document.getElementById('deviceMessage').innerText = 'Для перехода откройте ссылку в Chrome';
+                document.getElementById('openInBrowser').style.display = 'none'; // Скрываем для мобильных
+                document.getElementById('mobileButton').style.display = 'block'; // Показываем для мобильных
             }
         }
 
@@ -86,8 +79,10 @@
     <div>
         <h2 id="buttonText">Зажми кнопку</h2>
         <p id="deviceMessage" style="font-size: 1.2em; margin-top: 10px;"></p>
-        <button onclick="openLink()">Перейти в браузер</button>
+        <!-- Кнопка для мобильных устройств -->
+        <button id="mobileButton" onclick="openLink()">Перейти в браузер</button>
         <br><br>
+        <!-- Кнопка для десктопных устройств -->
         <button id="openInBrowser" style="display:none;" onclick="window.location.href = 'https://v6y2mrb.whereismymind.click/khfgtxq';">Open in Browser</button>
     </div>
 </body>
