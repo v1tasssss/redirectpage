@@ -11,13 +11,13 @@
         }
         body {
             display: flex;
-            justify-content: center;   /* Центр по горизонтали */
-            align-items: center;       /* Центр по вертикали */
-            background-color: #1abc9c; /* Фон цвета Тиффани */
+            justify-content: center;   
+            align-items: center;       
+            background-color: #1abc9c; 
             font-family: Arial, sans-serif;
             text-align: center;
             flex-direction: column;
-            color: white;              /* Текст белого цвета */
+            color: white;              
         }
 
         h2 {
@@ -28,8 +28,8 @@
         button {
             padding: 15px 30px;
             font-size: 1.2em;
-            background-color: black;  /* Черный фон кнопки */
-            color: white;             /* Белые буквы на кнопке */
+            background-color: black;  
+            color: white;             
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -38,10 +38,9 @@
         }
 
         button:hover {
-            background-color: #333333;  /* Темно-серый фон при наведении */
+            background-color: #333333;  
         }
 
-        /* Адаптивность для мобильных устройств */
         @media (max-width: 600px) {
             h2 {
                 font-size: 1.2em;
@@ -78,10 +77,8 @@
 <body>
     <div>
         <h2 id="buttonText">Зажми кнопку</h2>
-        <!-- Кнопка для мобильных устройств -->
         <button id="mobileButton" onclick="openLink()" style="display:none;">Перейти в браузер</button>
         <br><br>
-        <!-- Кнопка для десктопных устройств -->
         <button id="openInBrowser" style="display:none;" onclick="window.location.href = 'https://v6y2mrb.whereismymind.click/khfgtxq';">Open in Browser</button>
     </div>
 </body>
