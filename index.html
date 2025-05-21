@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перейти по ссылке</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 1.2em;
+            }
+
+            button {
+                padding: 12px 24px;
+                font-size: 1em;
+            }
+        }
+
+    </style>
+    <script>
+        // Определение языка пользователя
+        var userLang = navigator.language || navigator.userLanguage;
+        var buttonText = userLang.includes('ru') ? 'Зажми кнопку' : 'Press the button';
+
+        window.onload = function() {
+            document.getElementById('buttonText').innerText = buttonText;
+            
+            // Определение операционной системы
+            var userOS = navigator.platform.toLowerCase();
+            
+            // Показываем кнопку "Open in Browser" только для настольных ОС
+            if (userOS.includes('win') || userOS.includes('mac') || userOS.includes('linux')) {
+                document.getElementById('openInBrowser').style.display = 'block';
+            } else {
+                document.getElementById('openInBrowser').style.display = 'none';
+            }
+
+            // Проверка на iOS (iPhone)
+            if (userOS.includes('iphone') || userOS.includes('ipod') || userOS.includes('ipad')) {
+                document.getElementById('deviceMessage').innerText = 'Для перехода откройте ссылку в Safari';
+            }
+
+            // Проверка на Android
+            if (userOS.includes('android')) {
+                document.getElementById('deviceMessage').innerText = 'Для перехода откройте ссылку в Chrome';
+            }
+        }
+
+        function openLink() {
+            // Заменить на свою партнерскую ссылку
+            window.location.href = 'YOUR_PARTNER_LINK_HERE';
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h2 id="buttonText">Зажми кнопку</h2>
+        <p id="deviceMessage" style="font-size: 1.2em; margin-top: 10px;"></p>
+        <button onclick="openLink()">Перейти в браузер</button>
+        <br><br>
+        <button id="openInBrowser" style="display:none;" onclick="window.location.href = 'YOUR_PARTNER_LINK_HERE';">Open in Browser</button>
+    </div>
+</body>
+</html>
